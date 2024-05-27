@@ -112,3 +112,48 @@ int *resize(int *old_vector,int old_size,int new_size)
     delete[]old_vector;//libero la memoria del antiguo vector
    return aux;//retorno el nuevo vector
 }
+// mayor elemento de un vector 
+int buscarMayor(int* vector, int tamaño) 
+{
+    if (tamaño == 0) {
+        printf("\n ERROR\n");
+        return -1; 
+    }
+    
+    int mayor = vector[0];
+    for (int i = 1; i < tamaño; ++i) {
+        if (vector[i] > mayor) {
+            mayor = vector[i];
+        }
+    }
+    return mayor;
+}
+
+//ordenar un vector procedimiento 
+void ordenarVector(int* vector, int tamaño) {
+    for (int i = 0; i < tamaño - 1; ++i) {
+        for (int j = 0; j < tamaño - i - 1; ++j) {
+            if (vector[j] > vector[j + 1]) {
+                // Intercambia vector[j] y vector[j + 1]
+                int temp = vector[j];
+                vector[j] = vector[j + 1];
+                vector[j + 1] = temp;
+            }
+        }
+    }
+}
+//MENOR ELEMENTO DE UN VECTOR 
+int buscarMenor(int* vector, int tamaño) {
+    if (tamaño == 0) {
+       printf("\ERROR");
+        return -1; 
+    }
+    
+    int menor = vector[0];
+    for (int i = 1; i < tamaño; ++i) {
+        if (vector[i] < menor) {
+            menor = vector[i];
+        }
+    }
+    return menor;
+}
