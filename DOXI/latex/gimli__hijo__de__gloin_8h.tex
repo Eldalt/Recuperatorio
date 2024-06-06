@@ -1,0 +1,210 @@
+\doxysection{gimli\+\_\+hijo\+\_\+de\+\_\+gloin.\+h File Reference}
+\hypertarget{gimli__hijo__de__gloin_8h}{}\label{gimli__hijo__de__gloin_8h}\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnetwork}{network}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structnetwork}{network}} \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab4bc2b68618b540a7be538e6526272aa}{showl\+Ds}} (FILE \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}v)
+\item 
+int \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a8b830d7a14b6e6a1bb2c7e29d7a8bf52}{count\+Devices}} (FILE \texorpdfstring{$\ast$}{*}f)
+\item 
+\mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a1cd11f9df471e453935d1c9e0e511ed7}{get\+Register}} (FILE \texorpdfstring{$\ast$}{*}f, uint16\+\_\+t ID)
+\item 
+int \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a3a60d033196f81e350fd25296e1412d3}{busqueda\+\_\+lineal}} (FILE \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}v, uint16\+\_\+t id)
+\item 
+void \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a75e1d3f7925c2e39161464900d196c78}{mostras\+\_\+archivo}} (FILE \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}v, int c)
+\item 
+void \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a5f71c5cafdbdc4a4bdc2295450ba4275}{Search\+\_\+\+Top\+\_\+\+ID}} (FILE \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}v, int c, uint16\+\_\+t id)
+\item 
+void \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a10e2de890d327b753bcf1d48ad254aa8}{Number\+\_\+of\+\_\+teams}} (FILE \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}v, int c)
+\begin{DoxyCompactList}\small\item\em Number\+\_\+of\+\_\+teams este procedimiento te dice la cantidad total del tipo de dispositivo que tengo en la conexion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gimli__hijo__de__gloin_8h_af026f1913162e0357ad3102cfb24f55d}{show\+\_\+bin32}} (uint32\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Show\+\_\+bin32 este procedimiento retorna una variable de tipo uint32 y te la convierte a binario para su manipulacion sirve mucho para mostrar variables de 32 bits muchos mas comodo para su interpretacion. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a8c9de10dd1d6a44abce006c373f63cd1}{carry\+\_\+rotate32}} (uint32\+\_\+t data, int N)
+\begin{DoxyCompactList}\small\item\em carry\+\_\+rotate 32 esta funcion retorna una variable uint32 su funcionamiento trata de rotar una variable n veces y los bits MSB y LSB no se pierden si no se insertan de nuevo en la variable pero al lado contrario \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{gimli__hijo__de__gloin_8h_aa2d4b247fe1880ed6041259b423a5688}{extract\+\_\+segment}} (uint16\+\_\+t data, int start, int end)
+\begin{DoxyCompactList}\small\item\em extract\+\_\+segemente Esta funcion extrae un segmento de una variable de 64 y llevandola a la posicion 0 (lsb) para un funcionamiento mas sencillo \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gimli__hijo__de__gloin_8h_aaab4d582f49e8fe1a322d01fbb4c3d6b}{concat}} (int \texorpdfstring{$\ast$}{*}vec\+\_\+left, int left\+\_\+size, int \texorpdfstring{$\ast$}{*}vec\+\_\+right, int right\+\_\+size)
+\item 
+int \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a59a832063f70c1913ee4416a430d98b7}{comparacion}} (int a, int b)
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a8c70f9cf0fe402d9943ac9fc78d05026}{resize}} (int \texorpdfstring{$\ast$}{*}old\+\_\+vector, int old\+\_\+size, int new\+\_\+size)
+\item 
+int \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a887fcdf76c10f785378ec20cfe8219f4}{buscar\+Mayor}} (int \texorpdfstring{$\ast$}{*}vector, int tamaño)
+\item 
+void \mbox{\hyperlink{gimli__hijo__de__gloin_8h_afc62f8ca62139d57fb34e93bf71543d4}{ordenar\+Vector}} (int \texorpdfstring{$\ast$}{*}vector, int tamaño)
+\item 
+int \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab028e40d2db6992b01b0cc334b146e6d}{buscar\+Menor}} (int \texorpdfstring{$\ast$}{*}vector, int tamaño)
+\item 
+int \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a9098d8bc58d1f9cd192976a70c5dbd07}{total\+\_\+archivos}} (FILE \texorpdfstring{$\ast$}{*}f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}\label{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!net@{net}}
+\index{net@{net}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{net}{net}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structnetwork}{network}} \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gimli__hijo__de__gloin_8h_a887fcdf76c10f785378ec20cfe8219f4}\label{gimli__hijo__de__gloin_8h_a887fcdf76c10f785378ec20cfe8219f4} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!buscarMayor@{buscarMayor}}
+\index{buscarMayor@{buscarMayor}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{buscarMayor()}{buscarMayor()}}
+{\footnotesize\ttfamily int buscar\+Mayor (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{vector,  }\item[{int}]{tamaño }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_ab028e40d2db6992b01b0cc334b146e6d}\label{gimli__hijo__de__gloin_8h_ab028e40d2db6992b01b0cc334b146e6d} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!buscarMenor@{buscarMenor}}
+\index{buscarMenor@{buscarMenor}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{buscarMenor()}{buscarMenor()}}
+{\footnotesize\ttfamily int buscar\+Menor (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{vector,  }\item[{int}]{tamaño }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_a3a60d033196f81e350fd25296e1412d3}\label{gimli__hijo__de__gloin_8h_a3a60d033196f81e350fd25296e1412d3} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!busqueda\_lineal@{busqueda\_lineal}}
+\index{busqueda\_lineal@{busqueda\_lineal}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{busqueda\_lineal()}{busqueda\_lineal()}}
+{\footnotesize\ttfamily int busqueda\+\_\+lineal (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{\mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}}]{v,  }\item[{uint16\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_a8c9de10dd1d6a44abce006c373f63cd1}\label{gimli__hijo__de__gloin_8h_a8c9de10dd1d6a44abce006c373f63cd1} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!carry\_rotate32@{carry\_rotate32}}
+\index{carry\_rotate32@{carry\_rotate32}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{carry\_rotate32()}{carry\_rotate32()}}
+{\footnotesize\ttfamily uint32\+\_\+t carry\+\_\+rotate32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{data,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+carry\+\_\+rotate 32 esta funcion retorna una variable uint32 su funcionamiento trata de rotar una variable n veces y los bits MSB y LSB no se pierden si no se insertan de nuevo en la variable pero al lado contrario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & como parametro es de tipo uint32\+\_\+t \\
+\hline
+{\em N} & cantidad de veces que quieras rotar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t lo que retorna 
+\end{DoxyReturn}
+\Hypertarget{gimli__hijo__de__gloin_8h_a59a832063f70c1913ee4416a430d98b7}\label{gimli__hijo__de__gloin_8h_a59a832063f70c1913ee4416a430d98b7} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!comparacion@{comparacion}}
+\index{comparacion@{comparacion}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{comparacion()}{comparacion()}}
+{\footnotesize\ttfamily int comparacion (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_aaab4d582f49e8fe1a322d01fbb4c3d6b}\label{gimli__hijo__de__gloin_8h_aaab4d582f49e8fe1a322d01fbb4c3d6b} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!concat@{concat}}
+\index{concat@{concat}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{concat()}{concat()}}
+{\footnotesize\ttfamily int \texorpdfstring{$\ast$}{*} concat (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{vec\+\_\+left,  }\item[{int}]{left\+\_\+size,  }\item[{int \texorpdfstring{$\ast$}{*}}]{vec\+\_\+right,  }\item[{int}]{right\+\_\+size }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_a8b830d7a14b6e6a1bb2c7e29d7a8bf52}\label{gimli__hijo__de__gloin_8h_a8b830d7a14b6e6a1bb2c7e29d7a8bf52} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!countDevices@{countDevices}}
+\index{countDevices@{countDevices}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{countDevices()}{countDevices()}}
+{\footnotesize\ttfamily int count\+Devices (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_aa2d4b247fe1880ed6041259b423a5688}\label{gimli__hijo__de__gloin_8h_aa2d4b247fe1880ed6041259b423a5688} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!extract\_segment@{extract\_segment}}
+\index{extract\_segment@{extract\_segment}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{extract\_segment()}{extract\_segment()}}
+{\footnotesize\ttfamily uint16\+\_\+t extract\+\_\+segment (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{data,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+extract\+\_\+segemente Esta funcion extrae un segmento de una variable de 64 y llevandola a la posicion 0 (lsb) para un funcionamiento mas sencillo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & como parametro de la variable de 64 \\
+\hline
+{\em start} & como parametro inicial del segmento \\
+\hline
+{\em end} & como parametro final del segmento \\
+\hline
+\end{DoxyParams}
+\Hypertarget{gimli__hijo__de__gloin_8h_a1cd11f9df471e453935d1c9e0e511ed7}\label{gimli__hijo__de__gloin_8h_a1cd11f9df471e453935d1c9e0e511ed7} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!getRegister@{getRegister}}
+\index{getRegister@{getRegister}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{getRegister()}{getRegister()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} get\+Register (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{uint16\+\_\+t}]{ID }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_a75e1d3f7925c2e39161464900d196c78}\label{gimli__hijo__de__gloin_8h_a75e1d3f7925c2e39161464900d196c78} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!mostras\_archivo@{mostras\_archivo}}
+\index{mostras\_archivo@{mostras\_archivo}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{mostras\_archivo()}{mostras\_archivo()}}
+{\footnotesize\ttfamily void mostras\+\_\+archivo (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{\mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}}]{v,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_a10e2de890d327b753bcf1d48ad254aa8}\label{gimli__hijo__de__gloin_8h_a10e2de890d327b753bcf1d48ad254aa8} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!Number\_of\_teams@{Number\_of\_teams}}
+\index{Number\_of\_teams@{Number\_of\_teams}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{Number\_of\_teams()}{Number\_of\_teams()}}
+{\footnotesize\ttfamily void Number\+\_\+of\+\_\+teams (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{\mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}}]{v,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Number\+\_\+of\+\_\+teams este procedimiento te dice la cantidad total del tipo de dispositivo que tengo en la conexion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & //manipulador del archivo \\
+\hline
+{\em v} & //estructura de tipo net \\
+\hline
+{\em c} & //tope de la estructura \\
+\hline
+\end{DoxyParams}
+\Hypertarget{gimli__hijo__de__gloin_8h_afc62f8ca62139d57fb34e93bf71543d4}\label{gimli__hijo__de__gloin_8h_afc62f8ca62139d57fb34e93bf71543d4} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!ordenarVector@{ordenarVector}}
+\index{ordenarVector@{ordenarVector}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{ordenarVector()}{ordenarVector()}}
+{\footnotesize\ttfamily void ordenar\+Vector (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{vector,  }\item[{int}]{tamaño }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_a8c70f9cf0fe402d9943ac9fc78d05026}\label{gimli__hijo__de__gloin_8h_a8c70f9cf0fe402d9943ac9fc78d05026} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!resize@{resize}}
+\index{resize@{resize}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily int \texorpdfstring{$\ast$}{*} resize (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{old\+\_\+vector,  }\item[{int}]{old\+\_\+size,  }\item[{int}]{new\+\_\+size }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_a5f71c5cafdbdc4a4bdc2295450ba4275}\label{gimli__hijo__de__gloin_8h_a5f71c5cafdbdc4a4bdc2295450ba4275} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!Search\_Top\_ID@{Search\_Top\_ID}}
+\index{Search\_Top\_ID@{Search\_Top\_ID}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{Search\_Top\_ID()}{Search\_Top\_ID()}}
+{\footnotesize\ttfamily void Search\+\_\+\+Top\+\_\+\+ID (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{\mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}}]{v,  }\item[{int}]{c,  }\item[{uint16\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_af026f1913162e0357ad3102cfb24f55d}\label{gimli__hijo__de__gloin_8h_af026f1913162e0357ad3102cfb24f55d} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!show\_bin32@{show\_bin32}}
+\index{show\_bin32@{show\_bin32}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{show\_bin32()}{show\_bin32()}}
+{\footnotesize\ttfamily void show\+\_\+bin32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{x }\end{DoxyParamCaption})}
+
+
+
+Show\+\_\+bin32 este procedimiento retorna una variable de tipo uint32 y te la convierte a binario para su manipulacion sirve mucho para mostrar variables de 32 bits muchos mas comodo para su interpretacion. 
+
+\Hypertarget{gimli__hijo__de__gloin_8h_ab4bc2b68618b540a7be538e6526272aa}\label{gimli__hijo__de__gloin_8h_ab4bc2b68618b540a7be538e6526272aa} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!showlDs@{showlDs}}
+\index{showlDs@{showlDs}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{showlDs()}{showlDs()}}
+{\footnotesize\ttfamily void showl\+Ds (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{\mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab7cd9f953104a97a3f64c5523842c6eb}{net}} \texorpdfstring{$\ast$}{*}}]{v }\end{DoxyParamCaption})}
+
+\Hypertarget{gimli__hijo__de__gloin_8h_a9098d8bc58d1f9cd192976a70c5dbd07}\label{gimli__hijo__de__gloin_8h_a9098d8bc58d1f9cd192976a70c5dbd07} 
+\index{gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}!total\_archivos@{total\_archivos}}
+\index{total\_archivos@{total\_archivos}!gimli\_hijo\_de\_gloin.h@{gimli\_hijo\_de\_gloin.h}}
+\doxysubsubsection{\texorpdfstring{total\_archivos()}{total\_archivos()}}
+{\footnotesize\ttfamily int total\+\_\+archivos (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})}
+

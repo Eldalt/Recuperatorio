@@ -1,0 +1,46 @@
+\doxysection{gimli\+\_\+hijo\+\_\+de\+\_\+gloin.\+h}
+\hypertarget{gimli__hijo__de__gloin_8h_source}{}\label{gimli__hijo__de__gloin_8h_source}\mbox{\hyperlink{gimli__hijo__de__gloin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnetwork}{network}}\ }
+\DoxyCodeLine{00006\ \{\ \ }
+\DoxyCodeLine{00007\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structnetwork_ad05e81d1e380fb9c1ebff94cc6d0a588}{ID}};\textcolor{comment}{//ID}}
+\DoxyCodeLine{00008\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structnetwork_aec3154f782f1a3e8663413d23c30f0bc}{LLDC}};\textcolor{comment}{//contador\ de\ dispostivos\ conectados\ en\ el\ nivel\ inferior}}
+\DoxyCodeLine{00009\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structnetwork_a51aa321f1a2056db861886d128311ab2}{TYPE}};\textcolor{comment}{//tipo\ de\ dispositvo}}
+\DoxyCodeLine{00010\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structnetwork_a0428a533e6ced28c725cf8f8f8840cc9}{INFO}};\textcolor{comment}{//info\ solo\ para\ sensores\ y\ actudores\ }}
+\DoxyCodeLine{00011\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structnetwork_ac22c6eded83457833b1e920f31f8eee0}{UPLID}};\textcolor{comment}{//ID\ del\ equipo\ superior\ }}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ }
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnetwork}{network}}\ \mbox{\hyperlink{structnetwork}{net}};}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab4bc2b68618b540a7be538e6526272aa}{showlDs}}(\ FILE\ *f,\ \mbox{\hyperlink{structnetwork}{net}}\ *v);}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a8b830d7a14b6e6a1bb2c7e29d7a8bf52}{countDevices}}(FILE\ *f);}
+\DoxyCodeLine{00018\ \mbox{\hyperlink{structnetwork}{net}}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a1cd11f9df471e453935d1c9e0e511ed7}{getRegister}}(FILE\ *f,\ uint16\_t\ \ \mbox{\hyperlink{structnetwork_ad05e81d1e380fb9c1ebff94cc6d0a588}{ID}});}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ \ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a3a60d033196f81e350fd25296e1412d3}{busqueda\_lineal}}(FILE\ *f,\mbox{\hyperlink{structnetwork}{net}}\ *v,uint16\_t\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a75e1d3f7925c2e39161464900d196c78}{mostras\_archivo}}(FILE*f,\mbox{\hyperlink{structnetwork}{net}}\ *v,\textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a5f71c5cafdbdc4a4bdc2295450ba4275}{Search\_Top\_ID}}(FILE\ *f,\mbox{\hyperlink{structnetwork}{net}}\ *v,\textcolor{keywordtype}{int}\ c,uint16\_t\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a10e2de890d327b753bcf1d48ad254aa8}{Number\_of\_teams}}(FILE\ *f,\mbox{\hyperlink{structnetwork}{net}}\ *v,\textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//declaraciones\ OP}}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_af026f1913162e0357ad3102cfb24f55d}{show\_bin32}}(uint32\_t\ x);}
+\DoxyCodeLine{00052\ uint32\_t\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a8c9de10dd1d6a44abce006c373f63cd1}{carry\_rotate32}}(uint32\_t\ data,\textcolor{keywordtype}{int}\ N);}
+\DoxyCodeLine{00062\ uint16\_t\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_aa2d4b247fe1880ed6041259b423a5688}{extract\_segment}}\ (uint16\_t\ data,\ \textcolor{keywordtype}{int}\ start,\ \textcolor{keywordtype}{int}\ end);}
+\DoxyCodeLine{00063\ \textcolor{comment}{//declaraciones\ array\ }}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_aaab4d582f49e8fe1a322d01fbb4c3d6b}{concat}}(\textcolor{keywordtype}{int}*\ vec\_left,\textcolor{keywordtype}{int}\ left\_size,\textcolor{keywordtype}{int}*\ vec\_right,\textcolor{keywordtype}{int}\ right\_size);}
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a59a832063f70c1913ee4416a430d98b7}{comparacion}}(\textcolor{keywordtype}{int}\ a,\textcolor{keywordtype}{int}\ b);}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{gimli__hijo__de__gloin_8h_a8c70f9cf0fe402d9943ac9fc78d05026}{resize}}(\textcolor{keywordtype}{int}\ *old\_vector,\textcolor{keywordtype}{int}\ old\_size,\textcolor{keywordtype}{int}\ new\_size);}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a887fcdf76c10f785378ec20cfe8219f4}{buscarMayor}}(\textcolor{keywordtype}{int}*\ vector,\ \textcolor{keywordtype}{int}\ tamaño)\ ;}
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_afc62f8ca62139d57fb34e93bf71543d4}{ordenarVector}}(\textcolor{keywordtype}{int}*\ vector,\ \textcolor{keywordtype}{int}\ tamaño);}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_ab028e40d2db6992b01b0cc334b146e6d}{buscarMenor}}(\textcolor{keywordtype}{int}*\ vector,\ \textcolor{keywordtype}{int}\ tamaño);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gimli__hijo__de__gloin_8h_a9098d8bc58d1f9cd192976a70c5dbd07}{total\_archivos}}(FILE\ *f);}
+
+\end{DoxyCode}
